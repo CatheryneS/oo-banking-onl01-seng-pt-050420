@@ -19,7 +19,7 @@ class Transfer
     @amount = 0
     if @sender.balance < @amount
       @status = "Transaction rejected. Please check your account balance."
-    elsif @sender.close_account == true || @receiver.close_account == true
+    elsif @sender.close_account == true
       @status = "rejected"
     else 
       @status = "complete"
