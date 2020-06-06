@@ -19,11 +19,12 @@ class Transfer
     elsif @sender.close_account == true
       @status = "rejected"
     else 
+      @sender.balance = @sender.balance - @amount
+      @receiver.balance = @receiver.balance + @amount
+      @amount = 0
       @status = "complete"
     end
-    @sender.balance = @sender.balance - @amount
-    @receiver.balance = @receiver.balance + @amount
-    @amount = 0
+  
   end
   
 end
