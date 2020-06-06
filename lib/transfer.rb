@@ -19,7 +19,8 @@ class Transfer
     @amount = 0
     if @sender.valid? == false || @receiver.valid? == false 
       @status = "Transaction rejected. Please check your account balance."
-    elsif @sender.
+    elsif @sender.closed_account == true || @receiver.closed_account == true
+      @status = "rejected"
     else 
       @status = "complete"
     end
