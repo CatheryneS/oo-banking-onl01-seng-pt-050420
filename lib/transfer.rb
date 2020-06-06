@@ -20,4 +20,7 @@ class Transfer
       @amount = 0.0 && self.status = "complete"
     end
   end
+  
+  def reject 
+    if 
 end
