@@ -19,9 +19,8 @@ class Transfer
     else
       @sender.balance = @sender.balance - @amount
       @receiver.balance = @receiver.balance + @amount
-      @amount = 0.0
+      @amount = 0.0 && self.status = "complete"
     end
-    self.status = "complete"
   end
   
 end
